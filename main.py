@@ -26,9 +26,9 @@ def tts(message):
     engine.save_to_file(message_tts, file_name)
     engine.runAndWait()
     bot.send_audio(message.chat.id, audio=open(
-        f'E:\\GitHub\\telegram-bot\\{file_name}', 'rb'))
+        f'/public_html/cgi-bin/{file_name}', 'rb'))
     sleep(1)
-    os.remove(f'E:\\GitHub\\telegram-bot\\{file_name}')
+    os.remove(f'/public_html/cgi-bin/{file_name}')
 
 
 @bot.message_handler(commands=['randomn'])
